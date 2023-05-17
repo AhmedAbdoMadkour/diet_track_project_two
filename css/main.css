@@ -11,6 +11,8 @@ html {
 
 body {
     font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -347,15 +349,232 @@ header .container nav>ul li a {
 
 
 /* END TRANSFORMERS */
-/* START TRUTH OR DIET */
-.truth .container .boxs_truth .box_truth:hover {}
+/* START PLANS */
+.plans {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #eee;
 
-.truth .container .boxs_truth .answer {
-    visibility: hidden;
 }
 
-.truth .container .boxs_truth:hover .answer {
-    visibility: visible;
+.plans .main_tital {
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
 }
 
-/* END TRUTH OR DIET */
+.plans .main_tital h1 {
+    position: relative;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plans .main_tital h1:hover {
+    border-color: white;
+    color: white;
+    transition: .5s;
+}
+
+.plans .main_tital h1::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #488335;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+
+
+.plans .main_tital h1::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #488335;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+}
+
+.plans .main_tital h1:hover:before {
+    animation: move_left .5s linear forwards;
+}
+
+.plans .main_tital h1:hover::after {
+    animation: move_right .5s linear forwards;
+}
+
+@keyframes move_right {
+    50% {
+        right: 0;
+        border-radius: 0;
+    }
+
+    100% {
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+    }
+}
+
+@keyframes move_left {
+    50% {
+        left: 0;
+        border-radius: 0;
+
+    }
+
+    100% {
+        left: 0;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.plans .main_tital h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+}
+
+.plans .main_tital p {
+    text-transform: capitalize;
+    font-size: 17px;
+    color: #777;
+}
+
+.plans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.plans .container .box_plan {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #777;
+}
+
+.plans .container .box_plan .text_plans {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.plans .container .box_plan h3 {
+    padding-left: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.plans .container .box_plan .text_plans i {
+    background-color: #488335;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    padding: 15px;
+
+}
+
+.plans .container img {
+    width: 100%;
+}
+
+/* END PLANS */
+/* START FOOTER */
+footer {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+
+}
+
+footer .container .phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #777;
+    font-weight: bold;
+}
+
+footer .container .phone img {
+    width: 200px;
+}
+
+footer .container .phone div {
+    padding: 15px;
+}
+
+footer .container .phone a {
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+}
+
+footer .container .quicklinks {
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer .container .quicklinks a {
+    padding: 15px;
+    color: #777;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .container .tools {
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer .container .tools a {
+    padding: 15px;
+    color: #777;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .container .follow_us a {
+    padding: 10px;
+    background-color: #eee;
+    color: #777;
+}
+
+footer .copy_footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    color: #777;
+    padding: 20px;
+}
+
+/* EDN FOOTER */
